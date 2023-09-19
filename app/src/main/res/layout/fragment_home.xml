@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    tools:context=".HomeFragment">
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/buttAuctions"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="25dp"
+       android:layout_marginTop="30dp"
+       android:clickable="true"
+       app:cardBackgroundColor="@color/card_color"
+       app:cardCornerRadius="20dp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/panel">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="170dp"
+          android:layout_height="140dp">
+
+         <de.hdodenhof.circleimageview.CircleImageView
+             android:id="@+id/auctions"
+             android:layout_width="60dp"
+             android:layout_height="60dp"
+             android:layout_marginTop="20dp"
+             android:src="@drawable/auction"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:text="Аукционы"
+             android:textColor="@color/white"
+             android:textSize="24sp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/auctions" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   </androidx.cardview.widget.CardView>
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/buttMyBids"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="20dp"
+       android:layout_marginTop="30dp"
+       android:clickable="true"
+       app:cardBackgroundColor="@color/card_color"
+       app:cardCornerRadius="20dp"
+       app:layout_constraintStart_toEndOf="@+id/buttAuctions"
+       app:layout_constraintTop_toBottomOf="@id/panel">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="170dp"
+          android:layout_height="140dp">
+
+         <de.hdodenhof.circleimageview.CircleImageView
+             android:id="@+id/bids"
+             android:layout_width="60dp"
+             android:layout_height="60dp"
+             android:layout_marginTop="20dp"
+             android:src="@drawable/bids"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:text="Мои ставки"
+             android:textColor="@color/white"
+             android:textSize="24sp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/bids" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   </androidx.cardview.widget.CardView>
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/buttViewCars"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="25dp"
+       android:layout_marginTop="20dp"
+       android:clickable="true"
+       app:cardBackgroundColor="@color/card_color"
+       app:cardCornerRadius="20dp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/buttAuctions">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="170dp"
+          android:layout_height="140dp">
+
+         <de.hdodenhof.circleimageview.CircleImageView
+             android:id="@+id/view"
+             android:layout_width="60dp"
+             android:layout_height="60dp"
+             android:layout_marginTop="20dp"
+             android:src="@drawable/view_car"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:text="Просмотры"
+             android:textColor="@color/white"
+             android:textSize="24sp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/view" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   </androidx.cardview.widget.CardView>
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/buttFavorites"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="20dp"
+       android:layout_marginTop="20dp"
+       android:clickable="true"
+       app:cardBackgroundColor="@color/card_color"
+       app:cardCornerRadius="20dp"
+       app:layout_constraintStart_toEndOf="@+id/buttViewCars"
+       app:layout_constraintTop_toBottomOf="@+id/buttMyBids">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="170dp"
+          android:layout_height="140dp">
+
+         <de.hdodenhof.circleimageview.CircleImageView
+             android:id="@+id/favorites"
+             android:layout_width="60dp"
+             android:layout_height="60dp"
+             android:layout_marginTop="20dp"
+             android:src="@drawable/heart_ic"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:text="Избранное"
+             android:textColor="@color/white"
+             android:textSize="24sp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/favorites" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   </androidx.cardview.widget.CardView>
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/buttResultAuction"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="25dp"
+       android:layout_marginTop="20dp"
+       android:clickable="true"
+       app:cardBackgroundColor="@color/card_color"
+       app:cardCornerRadius="20dp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/buttViewCars">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="170dp"
+          android:layout_height="140dp">
+
+         <de.hdodenhof.circleimageview.CircleImageView
+             android:id="@+id/statistics"
+             android:layout_width="55dp"
+             android:layout_height="55dp"
+             android:layout_marginTop="20dp"
+             android:src="@drawable/statistics"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="25dp"
+             android:text="Статистика"
+             android:textAlignment="center"
+             android:textColor="@color/white"
+             android:textSize="24sp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/statistics" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   </androidx.cardview.widget.CardView>
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/buttAdvancedSearch"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="20dp"
+       android:layout_marginTop="20dp"
+       android:clickable="true"
+       app:cardBackgroundColor="@color/card_color"
+       app:cardCornerRadius="20dp"
+       app:layout_constraintStart_toEndOf="@+id/buttResultAuction"
+       app:layout_constraintTop_toBottomOf="@+id/buttFavorites">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="170dp"
+          android:layout_height="140dp">
+
+         <de.hdodenhof.circleimageview.CircleImageView
+             android:id="@+id/search"
+             android:layout_width="70dp"
+             android:layout_height="70dp"
+             android:layout_marginTop="20dp"
+             android:src="@drawable/finder"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+             android:text="Поиск"
+             android:textAlignment="center"
+             android:textColor="@color/white"
+             android:textSize="24sp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/search" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   </androidx.cardview.widget.CardView>
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/buttSearch"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="20dp"
+       android:layout_marginTop="30dp"
+       android:clickable="true"
+       app:cardBackgroundColor="#D4CFC9"
+       app:cardCornerRadius="20dp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="370dp"
+          android:layout_height="60dp">
+
+         <de.hdodenhof.circleimageview.CircleImageView
+             android:id="@+id/icon_search"
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:layout_marginStart="10dp"
+             android:src="@drawable/search"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintVertical_bias="0.5" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="20dp"
+             android:text="Поиск по марке, модели..."
+             android:textAlignment="center"
+             android:textColor="#28282A"
+             android:textSize="20sp"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintStart_toEndOf="@id/icon_search"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintVertical_bias="0.5"
+             tools:layout_editor_absoluteX="300dp" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   </androidx.cardview.widget.CardView>
+
+   <TextView
+       android:id="@+id/panel"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:text="Пaнель мониторинга"
+       android:textColor="@color/white"
+       android:textSize="30sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/buttAdmin" />
+
+   <Button
+       android:id="@+id/buttAdmin"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dp"
+       android:backgroundTint="#308695"
+       android:text="Панель администратора"
+       android:textColor="@color/white"
+       android:textSize="18sp"
+       android:visibility="gone"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/buttSearch" />
+</androidx.constraintlayout.widget.ConstraintLayout>

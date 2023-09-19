@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="270dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/buttMyBid"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:clickable="true"
+        app:cardCornerRadius="35dp"
+        app:cardBackgroundColor="#28282A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mybid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/card_color">
+
+            <ImageView
+                android:id="@+id/carImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5"
+                app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+            <TextView
+                android:id="@+id/carName"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="50dp"
+                android:text="Название авто"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/carImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/priceBid"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="60dp"
+                android:text="Ставка"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/carImage"
+                app:layout_constraintTop_toBottomOf="@+id/carName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

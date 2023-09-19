@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoActivity"
+    android:background="@color/background_app">
+
+    <ScrollView
+        android:id="@+id/scrollCarInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#455054"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#455054">
+
+            <TextView
+                android:id="@+id/modelBrandCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:minHeight="48dp"
+                android:text="Название авто:"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/modelBrandCarInfo"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:minHeight="48dp"
+                android:text="Название авто"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/modelBrandCarInfoText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/modelBrandCarInfo" />
+
+            <TextView
+                android:id="@+id/yearForCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Год:"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modelBrandCarInfo" />
+
+            <TextView
+                android:id="@+id/yearForCarInfo"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Год"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/yearForCarInfoText"
+                app:layout_constraintTop_toBottomOf="@+id/modelBrandCarInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/yearForCarInfo" />
+            <TextView
+                android:id="@+id/vinCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="VIN:"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/yearForCarInfo"/>
+            <TextView
+                android:id="@+id/vinCarInfo"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="5dp"
+                android:minHeight="48dp"
+                android:text="VIN"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/vinCarInfoText"
+                app:layout_constraintTop_toBottomOf="@+id/yearForCarInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vinCarInfo" />
+            <TextView
+                android:id="@+id/typeForCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:layout_marginStart="10dp"
+                android:text="Тип авто:"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vinCarInfo" />
+            <TextView
+                android:id="@+id/typeForCarInfo"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="5dp"
+                android:minHeight="48dp"
+                android:text="Тип авто"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/typeForCarInfoText"
+                app:layout_constraintTop_toBottomOf="@+id/vinCarInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/typeForCarInfo" />
+            <TextView
+                android:id="@+id/colorCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:layout_marginStart="10dp"
+                android:text="Цвет:"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/typeForCarInfo" />
+            <TextView
+                android:id="@+id/colorCarInfo"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Цвет"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/colorCarInfoText"
+                app:layout_constraintTop_toBottomOf="@+id/typeForCarInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/colorCarInfo" />
+            <TextView
+                android:id="@+id/mileageCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Пробег:"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/colorCarInfo" />
+
+            <TextView
+                android:id="@+id/mileageCarInfo"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Пробег"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/mileageCarInfoText"
+                app:layout_constraintTop_toBottomOf="@+id/colorCarInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mileageCarInfo" />
+            <TextView
+                android:id="@+id/damageForCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:minHeight="48dp"
+                android:text="Повреждения:"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mileageCarInfo" />
+            <TextView
+                android:id="@+id/damageForCarInfo"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:layout_marginStart="5dp"
+                android:text="Повреждения"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/damageForCarInfoText"
+                app:layout_constraintTop_toBottomOf="@+id/mileageCarInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/damageForCarInfo" />
+            <TextView
+                android:id="@+id/documentForCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Документ:"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/damageForCarInfo" />
+
+            <TextView
+                android:id="@+id/documentForCarInfo"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Документ"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/documentForCarInfoText"
+                app:layout_constraintTop_toBottomOf="@+id/damageForCarInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/documentForCarInfo" />
+            <TextView
+                android:id="@+id/engineForCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Тип двигателя:"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/documentForCarInfo" />
+            <TextView
+                android:id="@+id/engineForCarInfo"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Тип двигателя"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/engineForCarInfoText"
+                app:layout_constraintTop_toBottomOf="@+id/documentForCarInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/engineForCarInfo" />
+            <TextView
+                android:id="@+id/cylindersForCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Цилиндры:"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/engineForCarInfo" />
+            <TextView
+                android:id="@+id/cylindersForCarInfo"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Цилиндры"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/cylindersForCarInfoText"
+                app:layout_constraintTop_toBottomOf="@+id/engineForCarInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cylindersForCarInfo" />
+            <TextView
+                android:id="@+id/driveForCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Привод:"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cylindersForCarInfo" />
+
+            <TextView
+                android:id="@+id/driveForCarInfo"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:layout_marginStart="5dp"
+                android:text="Привод"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/driveForCarInfoText"
+                app:layout_constraintTop_toBottomOf="@+id/cylindersForCarInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/driveForCarInfo" />
+            <TextView
+                android:id="@+id/typeBodyForCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Тип кузова:"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/driveForCarInfo" />
+
+            <TextView
+                android:id="@+id/typeBodyForCarInfo"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Тип кузова"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/typeBodyForCarInfoText"
+                app:layout_constraintTop_toBottomOf="@+id/driveForCarInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/typeBodyForCarInfo" />
+            <TextView
+                android:id="@+id/transmissionForCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Коробка передач:"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/typeBodyForCarInfo" />
+            <TextView
+                android:id="@+id/transmissionForCarInfo"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Коробка передач"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/transmissionForCarInfoText"
+                app:layout_constraintTop_toBottomOf="@+id/typeBodyForCarInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/transmissionForCarInfo" />
+            <TextView
+                android:id="@+id/keysForCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Ключи:"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/transmissionForCarInfo" />
+            <TextView
+                android:id="@+id/keysForCarInfo"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Ключи"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/keysForCarInfoText"
+                app:layout_constraintTop_toBottomOf="@+id/transmissionForCarInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/keysForCarInfo" />
+            <TextView
+                android:id="@+id/fuelForCarInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Топливо"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/keysForCarInfo" />
+
+            <TextView
+                android:id="@+id/fuelForCarInfo"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:minHeight="48dp"
+                android:text="Топливо"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/fuelForCarInfoText"
+                app:layout_constraintTop_toBottomOf="@+id/keysForCarInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fuelForCarInfo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

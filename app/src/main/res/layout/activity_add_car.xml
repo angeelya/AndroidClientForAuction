@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_app"
+    tools:context=".AddCarActivity">
+
+    <TextView
+        android:id="@+id/textCar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Добавление авто"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollCar"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttAddImg"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/buttBrandAdd"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/card_color"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/brandCarAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Марка авто"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="28sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/buttModelAdd"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/card_color"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttBrandAdd"
+                tools:ignore="SpeakableTextPresentCheck">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/modelCarAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Модель авто"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="28sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/buttTypeTransportAdd"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/card_color"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttModelAdd"
+                tools:ignore="SpeakableTextPresentCheck">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/typeTransportCarAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Тип транспорта"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="28sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:id="@+id/yearCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="Год авто"
+                android:inputType="number"
+                android:maxLength="4"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttTypeTransportAdd" />
+
+            <EditText
+                android:id="@+id/minBidCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="Минимальная ставка"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/yearCarAdd" />
+
+            <EditText
+                android:id="@+id/reservePriceCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="Резервная цена"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/minBidCarAdd" />
+
+            <EditText
+                android:id="@+id/vinCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="VIN"
+                android:maxLength="17"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reservePriceCarAdd" />
+
+            <EditText
+                android:id="@+id/colorCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="Цвет"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vinCarAdd" />
+
+            <EditText
+                android:id="@+id/mileageCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="Пробег"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/colorCarAdd" />
+
+            <EditText
+                android:id="@+id/documentCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="Документы"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mileageCarAdd" />
+
+            <EditText
+                android:id="@+id/damageCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="Повреждения"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/documentCarAdd" />
+
+            <EditText
+                android:id="@+id/engineCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="Тип двигателя"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/damageCarAdd" />
+
+            <EditText
+                android:id="@+id/cylindersCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="Цилиндры"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/engineCarAdd" />
+
+            <EditText
+                android:id="@+id/driveCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="Привод"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cylindersCarAdd" />
+
+            <EditText
+                android:id="@+id/typeBodyCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="Тип кузова"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/driveCarAdd" />
+
+            <EditText
+                android:id="@+id/transmissionCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="Коробка передач"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/typeBodyCarAdd" />
+
+            <EditText
+                android:id="@+id/keysCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="Ключи"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/transmissionCarAdd" />
+
+            <EditText
+                android:id="@+id/fuelCarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#D4CFC9"
+                android:ems="10"
+                android:hint="Топливо"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#455054"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/keysCarAdd" />
+
+            <Button
+                android:id="@+id/buttAddCar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#308695"
+                android:text="Добавить"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fuelCarAdd" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listImgCarAdd"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCar"
+        app:reverseLayout="true" />
+
+    <Button
+        android:id="@+id/buttAddImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#308695"
+        android:text="Добавить изображение"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listImgCarAdd" />
+</androidx.constraintlayout.widget.ConstraintLayout>
